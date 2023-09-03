@@ -31,6 +31,10 @@ ul li:last-child, ul li:first-child {
     margin: 0;
 }
 
+h4 {
+    margin: 0;
+}
+
 #container {
     width: 100%;
     min-height: 100vh;
@@ -173,6 +177,10 @@ section h3 {
     color: #333;
 }
 
+.food-choice .section-header {
+    margin-bottom: 1.5rem;
+}
+
 .collapsible {
     display: none;
 }
@@ -253,6 +261,14 @@ section h3 {
     font-size: 1.2rem;
     width: 50vw;
     max-width: 1000px;
+}
+
+.food-choice .standard-form {
+    margin: 1.5rem 0;
+}
+
+.food-choice li:last-child, ul li:first-child {
+    margin: 0.875rem 0;
 }
 
 .standard-form .form-group {
