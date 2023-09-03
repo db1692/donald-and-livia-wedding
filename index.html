@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Donald & Livia</title>
+
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Montserrat:wght@400;500&display=swap"
+        rel="stylesheet">
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="icons/">
+    <link rel="icon" type="image/png" sizes="16x16" href="icons/favicon-16x16.png">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="script.js"></script>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+</head>
+
+<body>
+    <div id="container">
+        <section id="heading">
+            <div class="flower-header">
+                <h1>Donald & Livia</h1>
+            </div>
+            <div class="header-container"><img src="images/banner/1.jpg" alt="Wedding Image 1"></div>
+            <div class="sub-header">
+                <h2>Sunday 1st October 2023</h2>
+                <h2>Edinburgh</h2>
+            </div>
+        </section>
+
+        <section id="info" class="info">
+            <div class="section-header">
+                <h2>Details</h2>
+            </div>
+            <div class="section-container">
+                <div class="container-flex">
+                    <h3>Ceremony</h3>
+                    <p class="timing">12:15 - 13:45</p>
+                    <p>For our ceremony venue we chose the same room that Donald's parents got married in back in 2014.
+                        As it turns out the council sold that building and moved further down the Royal Mile in 2017,
+                        but it's the thought that counts</p>
+                    <p>Please arrive promptly at 12:15, the ceremony will run from 12:45 to around 13:45</p>
+                    <div class="location">
+                        <svg viewBox="0 0 24 24" focusable="false">
+                            <title>Map Marker</title>
+                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                d="M5.437 9.041c0-3.73 2.886-6.81 6.52-6.835A.61.61 0 0 1 12 2.204c3.653 0 6.563 3.091 6.563 6.837 0 5.975-3.986 10.694-5.527 12.298a1.401 1.401 0 0 1-1.036.456c-.393 0-.772-.165-1.036-.456-1.54-1.605-5.527-6.34-5.527-12.298zM12 3.406c.013 0 .026 0 .039-.002 2.921.022 5.324 2.516 5.324 5.637 0 5.489-3.702 9.916-5.199 11.474a.597.597 0 0 0-.015.016.202.202 0 0 1-.149.064.202.202 0 0 1-.149-.064.388.388 0 0 0-.015-.016C10.34 18.957 6.637 14.513 6.637 9.04c0-3.134 2.423-5.635 5.363-5.635zM9.332 8.729A2.67 2.67 0 1 1 12 11.4a2.67 2.67 0 0 1-2.668-2.67zM12 4.86a3.87 3.87 0 0 0-3.868 3.87A3.87 3.87 0 1 0 12 4.86z"
+                                fill="#fcfcfc;"></path>
+                        </svg>
+                        <p>The European Suite at Edinburgh City Chambers, 253 High Street, EH1 1YJ</p>
+                    </div>
+                    <div class="map-wrapper">
+                        <div id="cityChambersMap" class="map"></div>
+                    </div>
+                    <h3>Reception</h3>
+                    <p class="timing">14:30 - Late</p>
+                    <p>Our main criteria for choosing a reception venue was that it'd be big enough for a proper
+                        ceilidh, and we think we've chosen perfectly</p>
+                    <p>After the ceremony a coach will take guests down to the Old Dr Bells Bath in Leith where we'll
+                        have some food, some drinks (one or two) as well as a whole lot of dancing. We have the space
+                        until 01:00 for those with the stamina!</p>
+                    <div class="location">
+                        <svg viewBox="0 0 24 24" focusable="false">
+                            <title>Map Marker</title>
+                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                d="M5.437 9.041c0-3.73 2.886-6.81 6.52-6.835A.61.61 0 0 1 12 2.204c3.653 0 6.563 3.091 6.563 6.837 0 5.975-3.986 10.694-5.527 12.298a1.401 1.401 0 0 1-1.036.456c-.393 0-.772-.165-1.036-.456-1.54-1.605-5.527-6.34-5.527-12.298zM12 3.406c.013 0 .026 0 .039-.002 2.921.022 5.324 2.516 5.324 5.637 0 5.489-3.702 9.916-5.199 11.474a.597.597 0 0 0-.015.016.202.202 0 0 1-.149.064.202.202 0 0 1-.149-.064.388.388 0 0 0-.015-.016C10.34 18.957 6.637 14.513 6.637 9.04c0-3.134 2.423-5.635 5.363-5.635zM9.332 8.729A2.67 2.67 0 1 1 12 11.4a2.67 2.67 0 0 1-2.668-2.67zM12 4.86a3.87 3.87 0 0 0-3.868 3.87A3.87 3.87 0 1 0 12 4.86z"
+                                fill="currentColor"></path>
+                        </svg>
+                        <p>The Old Dr Bells Bath, 121 Great Junction Street, EH6 5JB</p>
+                    </div>
+                    <div class="map-wrapper">
+                        <div id="bathsMap" class="map"></div>
+                    </div>
+                    <h3>Schedule</h3>
+                    <ul class="schedule-list">
+                        <li class="schedule-item">
+                            <span class="schedule-timings">12:15 - 12:45</span>
+                            <span class="schedule-description">Ceremony guests arrive</span>
+                        </li>
+                        <li class="schedule-item">
+                            <span class="schedule-timings">12:45 - 13:45</span>
+                            <span class="schedule-description">Ceremony</span>
+                        </li>
+                        <li class="schedule-item">
+                            <span class="schedule-timings">13:45 - 14:30</span>
+                            <span class="schedule-description">Coach to reception</span>
+                        </li>
+                        <li class="schedule-item">
+                            <span class="schedule-timings">14:30 - 15:15</span>
+                            <span class="schedule-description">Drinks and canapes at reception</span>
+                        </li>
+                        <li class="schedule-item">
+                            <span class="schedule-timings">15:30 - 17:00</span>
+                            <span class="schedule-description">Wedding breakfast and speeches</span>
+                        </li>
+                        <li class="schedule-item">
+                            <span class="schedule-timings">19:00 - 22:00</span>
+                            <span class="schedule-description">Ceilidh and evening buffet</span>
+                        </li>
+                        <li class="schedule-item">
+                            <span class="schedule-timings">22:00 - 01:00</span>
+                            <span class="schedule-description">Music and dancing</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section id="food-choice" class="food-choice">
+            <div class="section-header toggle-header">
+                <h2>Food choice </h2>
+                <svg width="64px" height="64px" viewBox="0 0 24.00 24.00" fill="none" xmlns="http://www.w3.org/2000/svg"
+                    transform="matrix(1, 0, 0, 1, 0, 0)" stroke="#fff">
+                    <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                    <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                    <g id="SVGRepo_iconCarrier">
+                        <rect width="24" height="24" fill="#fcfcfc"></rect>
+                        <path d="M9.5 7L14.5 12L9.5 17" stroke="#000000" stroke-linecap="round" stroke-linejoin="round">
+                        </path>
+                    </g>
+                </svg>
+            </div>
+            <div class="section-container collapsible">
+                <div class="container-flex">
+                    <form class="standard-form" action="https://formspree.io/f/maygeeyl" method="post">
+                        <div class="form-group">
+                            <label for="guest-name">Your name:</label>
+                            <input type="text" id="name" name="name" autocomplete="name" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="email-address">Your email address:</label>
+                            <input type="email" id="email" name="email" autocomplete="email" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="starter">Choose your starter:</label>
+                            <select id="starter" name="starter" required>
+                                <option disabled selected>--Please choose an option--</option>
+                                <option value="Chicken">Chicken</option>
+                                <option value="Beef">Veg</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="main-course">Choose your main course:</label>
+                            <select id="main-course" name="main-course" required>
+                                <option disabled selected>--Please choose an option--</option>
+                                <option value="Beef">Beef</option>
+                                <option value="Veg">Veg</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="additional-info">Any additional information:</label>
+                            <textarea id="additional-info" name="additional-info" rows="4" cols="50"></textarea>
+                        </div>
+
+                        <div class="form-group">
+                            <input type="submit" value="Submit">
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+        </section>
+
+        <section id="honeymoon" class="honeymoon">
+            <div class="section-header toggle-header">
+                <h2>Our Honeymoon</h2>
+                <svg width="64px" height="64px" viewBox="0 0 24.00 24.00" fill="none" xmlns="http://www.w3.org/2000/svg"
+                    transform="matrix(1, 0, 0, 1, 0, 0)" stroke="#fff">
+                    <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                    <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                    <g id="SVGRepo_iconCarrier">
+                        <rect width="24" height="24" fill="#fcfcfc"></rect>
+                        <path d="M9.5 7L14.5 12L9.5 17" stroke="#000000" stroke-linecap="round" stroke-linejoin="round">
+                        </path>
+                    </g>
+                </svg>
+            </div>
+            <div class="section-container collapsible">
+                <div class="container-flex">
+                    <p>
+                        We are very excited to be spending our honeymoon in Italy! Right after the wedding we'll be
+                        kicking things off in
+                        Naples and then travelling from South to North: Rome, Modena, Bologna, and finally Venice
+                    </p>
+                    <div class="map-wrapper">
+                        <div id="italyMap" class="map"></div>
+                    </div>
+                    <p>Some planned highlights for the trip include:</p>
+                    <ul>
+                        <li>Taking in the sights and sounds (and pizzas) of Naples</li>
+                        <li>Checking out the Colosseum in Rome</li>
+                        <li>Teaching the people of Bologna how to make spag bol</li>
+                        <li>Trying the worlds fanciest tortellini in brodo in Modena</li>
+                    </ul>
+                    <p>If you have any suggestions such as restaurants, vineyards, museums etc please let us know using
+                        the box below:</p>
+
+                    <form class="standard-form" action="https://formspree.io/f/xpzgppaq" method="POST">
+                        <div class="form-group">
+                            <textarea id="suggestion" name="suggestion" rows="5" required></textarea>
+                        </div>
+
+                        <div class="form-group">
+                            <input type="submit" value="Submit">
+                        </div>
+                    </form>
+
+                    <p>
+                        If you would very kindly like to contribute to the honeymoon, you can chip in via PayPal
+                        using the button below:
+                    </p>
+
+                    <form id="paypal" action="https://www.paypal.com/donate" method="post" target="_top">
+                        <input type="hidden" name="hosted_button_id" value="8LZJWK3R23WK6" />
+                        <input type="image" src="icons/Paypal.jpg" border="0" name="submit"
+                            title="PayPal - The safer, easier way to pay online!" alt="Donate with PayPal button" />
+                        <img alt="" border="0" src="https://www.paypal.com/en_GB/i/scr/pixel.gif" width="1"
+                            height="1" />
+                    </form>
+                </div>
+            </div>
+        </section>
+        <div class="flower-footer"></div>
+    </div>
+    <script>
+        (g => { var h, a, k, p = "The Google Maps JavaScript API", c = "google", l = "importLibrary", q = "__ib__", m = document, b = window; b = b[c] || (b[c] = {}); var d = b.maps || (b.maps = {}), r = new Set, e = new URLSearchParams, u = () => h || (h = new Promise(async (f, n) => { await (a = m.createElement("script")); e.set("libraries", [...r] + ""); for (k in g) e.set(k.replace(/[A-Z]/g, t => "_" + t[0].toLowerCase()), g[k]); e.set("callback", c + ".maps." + q); a.src = `https://maps.${c}apis.com/maps/api/js?` + e; d[q] = f; a.onerror = () => h = n(Error(p + " could not load.")); a.nonce = m.querySelector("script[nonce]")?.nonce || ""; m.head.append(a) })); d[l] ? console.warn(p + " only loads once. Ignoring:", g) : d[l] = (f, ...n) => r.add(f) && u().then(() => d[l](f, ...n)) })({
+            key: "AIzaSyARwnaSbxcHZIVNn8ODT6kkg67q3VnFRSQ",
+            v: "beta"
+        });
+    </script>
+</body>
+
+</html>
