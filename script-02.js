@@ -1,8 +1,9 @@
 $(document).ready(function () {
 
     function setVH() {
-        let vh = window.innerHeight * 0.01;
+        let vh = window.innerHeight;
         document.documentElement.style.setProperty('--vh', `${vh}px`);
+        console.log(vh);
     }
 
     setVH();

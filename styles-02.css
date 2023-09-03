@@ -60,7 +60,7 @@ path {
 
 #heading {
     background-color: peachpuff;
-    height: calc(100vh - var(--vh));
+    height: var(--vh);
     font-family: 'Great Vibes', cursive;
     justify-content: space-between;
     padding-bottom: 1rem;
@@ -369,7 +369,7 @@ textarea {
 /* FOOTER */
 .flower-footer {
     position: relative;
-    height: 200px;
+    height: 40vh;
     margin-top:-200px;
     z-index: -100;
 }
