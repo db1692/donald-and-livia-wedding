@@ -1,8 +1,20 @@
 $(document).ready(function () {
 
+    function setVH() {
+        let vh = window.innerHeight * 0.01;
+        document.documentElement.style.setProperty('--vh', `${vh}px`);
+    }
+
+    setVH();
+
+    window.addEventListener('resize', () => {
+        setVH();
+    });
+
+
     $(".toggle-header").click(function () {
         var content = $(this).next(".collapsible");
-        var icon = $(this).children("svg");
+        var icon = $(this).find("path");
 
         if (content.is(':visible')) {
             content.slideUp();
@@ -36,7 +48,7 @@ $(document).ready(function () {
         });
 
         const cityChambersInfo = new google.maps.InfoWindow({
-            content:`<div jstcache="34" class="poi-info-window gm-style"> <div jstcache="2"> <div jstcache="3" class="title full-width" jsan="7.title,7.full-width">Edinburgh City Chambers</div> <div class="address"> <div jstcache="4" jsinstance="0" class="address-line full-width" jsan="7.address-line,7.full-width">253 High St</div><div jstcache="4" jsinstance="1" class="address-line full-width" jsan="7.address-line,7.full-width">Edinburgh</div><div jstcache="4" jsinstance="2" class="address-line full-width" jsan="7.address-line,7.full-width">EH1 1YJ</div><div jstcache="4" jsinstance="*3" class="address-line full-width" jsan="7.address-line,7.full-width">United Kingdom</div> </div> </div> <div jstcache="5" style="display:none"></div> <div class="view-link"> <a target="_blank" jstcache="6" href="https://maps.google.com/maps?ll=55.950297,-3.190319&amp;z=20&amp;t=m&amp;hl=en-US&amp;gl=US&amp;mapclient=apiv3&amp;cid=15667617062049039230" tabindex="0"> <span> View on Google Maps </span> </a> </div> </div>`,
+            content: `<div jstcache="34" class="poi-info-window gm-style"> <div jstcache="2"> <div jstcache="3" class="title full-width" jsan="7.title,7.full-width">Edinburgh City Chambers</div> <div class="address"> <div jstcache="4" jsinstance="0" class="address-line full-width" jsan="7.address-line,7.full-width">253 High St</div><div jstcache="4" jsinstance="1" class="address-line full-width" jsan="7.address-line,7.full-width">Edinburgh</div><div jstcache="4" jsinstance="2" class="address-line full-width" jsan="7.address-line,7.full-width">EH1 1YJ</div><div jstcache="4" jsinstance="*3" class="address-line full-width" jsan="7.address-line,7.full-width">United Kingdom</div> </div> </div> <div jstcache="5" style="display:none"></div> <div class="view-link"> <a target="_blank" jstcache="6" href="https://maps.google.com/maps?ll=55.950297,-3.190319&amp;z=20&amp;t=m&amp;hl=en-US&amp;gl=US&amp;mapclient=apiv3&amp;cid=15667617062049039230" tabindex="0"> <span> View on Google Maps </span> </a> </div> </div>`,
             ariaLabel: "Test"
         });
 
@@ -62,8 +74,8 @@ $(document).ready(function () {
         });
 
         const bathsInfo = new google.maps.InfoWindow({
-            content:`<div jstcache="34" class="poi-info-window gm-style"> <div jstcache="2"> <div jstcache="3" class="title full-width" jsan="7.title,7.full-width">The Old Dr Bells' Baths</div> <div class="address"> <div jstcache="4" jsinstance="0" class="address-line full-width" jsan="7.address-line,7.full-width">121 Great Jct St</div><div jstcache="4" jsinstance="1" class="address-line full-width" jsan="7.address-line,7.full-width">Edinburgh</div><div jstcache="4" jsinstance="2" class="address-line full-width" jsan="7.address-line,7.full-width">EH6 5JB</div><div jstcache="4" jsinstance="*3" class="address-line full-width" jsan="7.address-line,7.full-width">United Kingdom</div> </div> </div> <div jstcache="5" style="display:none"></div> <div class="view-link"> <a target="_blank" jstcache="6" href="https://maps.google.com/maps?ll=55.972295,-3.175132&amp;z=18&amp;t=m&amp;hl=en-US&amp;gl=US&amp;mapclient=apiv3&amp;cid=13226961064872402880"> <span> View on Google Maps </span> </a> </div> </div>`,
-            map:bathsMap
+            content: `<div jstcache="34" class="poi-info-window gm-style"> <div jstcache="2"> <div jstcache="3" class="title full-width" jsan="7.title,7.full-width">The Old Dr Bells' Baths</div> <div class="address"> <div jstcache="4" jsinstance="0" class="address-line full-width" jsan="7.address-line,7.full-width">121 Great Jct St</div><div jstcache="4" jsinstance="1" class="address-line full-width" jsan="7.address-line,7.full-width">Edinburgh</div><div jstcache="4" jsinstance="2" class="address-line full-width" jsan="7.address-line,7.full-width">EH6 5JB</div><div jstcache="4" jsinstance="*3" class="address-line full-width" jsan="7.address-line,7.full-width">United Kingdom</div> </div> </div> <div jstcache="5" style="display:none"></div> <div class="view-link"> <a target="_blank" jstcache="6" href="https://maps.google.com/maps?ll=55.972295,-3.175132&amp;z=18&amp;t=m&amp;hl=en-US&amp;gl=US&amp;mapclient=apiv3&amp;cid=13226961064872402880"> <span> View on Google Maps </span> </a> </div> </div>`,
+            map: bathsMap
         })
 
         bathsMarker.addListener("click", () => {

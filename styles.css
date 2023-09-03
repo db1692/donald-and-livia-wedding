@@ -51,13 +51,20 @@ h4 {
     align-items: center;
 }
 
+path {
+    transform-origin: center;
+    transition: 0.3s ease-in-out;
+}
+  
 /* HEADING */
 
 #heading {
     background-color: peachpuff;
-    height: 100vh;
+    height: calc(100vh - var(--vh));
     font-family: 'Great Vibes', cursive;
     justify-content: space-between;
+    padding-bottom: 1rem;
+    margin-bottom: 2rem;
 }
 
 .flower-header {
@@ -164,7 +171,6 @@ section {
 .section-header svg {
     margin-left: 18px;
     stroke: #fcfcfc;
-    transition: 0.3s ease-in-out;
 }
 
 section h3 {
@@ -397,8 +403,7 @@ textarea {
 
     /* GENERAL */
     p,
-    .section-header,
-    ul, .standard-form, .map  {
+    .section-header, .standard-form {
         max-width: 90vw;
         width:90vw;
     }
@@ -406,6 +411,16 @@ textarea {
     p, li {
         font-size: 1.1em;
         margin: 0.6rem 0;
+    }
+
+    .food-choice ul {
+        max-width: 75vw;
+        font-size: 1rem;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 0.75rem;
     }
 
     .section-header h2 {
@@ -431,6 +446,7 @@ textarea {
     .header-container {
         flex-grow: 1;
         max-height: 80vh;
+        width:90vw;
     }
 
     .header-container img {
@@ -469,6 +485,7 @@ textarea {
 
     .map {
         height: 300px;
+        width:80vw
     }
 
     /* FOOTER */
