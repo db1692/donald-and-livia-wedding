@@ -8,11 +8,6 @@ $(document).ready(function () {
 
     setVH();
 
-    window.addEventListener('resize', () => {
-        setVH();
-    });
-
-
     $(".toggle-header").click(function () {
         var content = $(this).next(".collapsible");
         var icon = $(this).find("path");
