@@ -5,6 +5,7 @@ body {
     margin: 0;
     padding: 0;
     background-color: #fcfcfc;
+    overflow-x: hidden;
 }
 
 p,
@@ -42,7 +43,6 @@ h4 {
     display: flex;
     flex: 1;
     flex-direction: column;
-    overflow-y: hidden;
 }
 
 .container-flex {
@@ -485,6 +485,10 @@ textarea {
     .schedule-item {
         flex-direction: column;
         text-align: center;
+    }
+
+    .schedule-timings {
+        padding: 0px;
     }
 
     /* FOOD FORM */
