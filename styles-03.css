@@ -187,6 +187,13 @@ section h3 {
     margin-bottom: 1.5rem;
 }
 
+.food-choice ul {
+    display: flex;
+    flex-direction: column;
+    align-content: flex-start;
+    width:50%;
+}
+
 .collapsible {
     display: none;
 }
@@ -273,8 +280,16 @@ section h3 {
     margin: 1.5rem 0;
 }
 
-.food-choice li:last-child, ul li:first-child {
+ul li:first-child {
     margin: 0.875rem 0;
+}
+
+.food-choice li:last-child {
+    margin: 0 0 1.5rem 0;
+}
+
+.food-choice h4:last-of-type {
+    margin-bottom: 0.875rem;
 }
 
 .standard-form .form-group {
@@ -475,6 +490,10 @@ textarea {
     /* FOOD FORM */
     .toggle-header svg {
         width:48px;
+    }
+
+    .food-choice ul {
+        width: 95vw;
     }
 
     /* MAPS */ 
